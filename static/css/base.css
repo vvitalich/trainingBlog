@@ -1,28 +1,40 @@
-/* static/css/base.css */
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
+  background-color: Cornsilk;
 }
 
 header {
+  background-color: Aqua;
   border-bottom: 1px solid #999;
   margin-bottom: 2rem;
   display: flex;
 }
 
 header h1 a {
-  color: red;
+  color: Chocolate;
   text-decoration: none;
+
 }
 
 .nav-left {
+  margin-left: 250px;
   margin-right: auto;
+
+}
+
+.nav-login {
+  margin-left: auto;
+  margin-right: 50px;
+
 }
 
 .nav-right {
   display: flex;
   padding-top: 2rem;
 }
+
+
 
 .post-entry {
   margin-bottom: 2rem;
@@ -34,15 +46,24 @@ header h1 a {
 
 .post-entry h2 a,
 .post-entry h2 a:visited {
-  color: blue;
+  margin-left: 100px;
+  color: DarkOliveGreen;
   text-decoration: none;
+
 }
 
 .post-entry p {
-  margin: 0;
+  margin-left: 50px;
   font-weight: 400;
 }
 
 .post-entry h2 a:hover {
-  color: red;
+  color: MediumPurple;
+
 }
+
+.login
+{
+ margin: 25px;
+}
+

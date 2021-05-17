@@ -7,17 +7,28 @@
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
   </head>
   <body>
-    <div>
+    <div class="one-left">
       <header>
         <div class="nav-left">
-          <h1><a href="{% url 'home' %}">Мой блог</a></h1>
+          <h1><a href="{% url 'home' %}">Django blog</a></h1>
+        </div>
+        <div class="nav-login">
+         {% if user.is_authenticated %}
+             <p>Hi {{ user.username }}!</p>
+             <p><a href="{% url 'logout' %}">Выход</a></p>
+         {% else %}
+             <p>Вы не авторизованы.</p>
+             <p><a href="{% url 'login' %}">Вход</a></p>
+
         </div>
         <div class="nav-right">
           <a href="{% url 'post_new' %}">+ Добавить запись</a>
         </div>
       </header>
-      {% block content %}
-      {% endblock content %}
+
+      {% endif %}
+    {% block content %}
+    {% endblock content %}
     </div>
   </body>
 </html>
